@@ -2,9 +2,8 @@
 
 require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DB_URL);
+mongoose.connect(process.env.MONGOURL);
 const BookModel = require('./models/books.js');
-
 
 const seed = () => {
   const book = new BookModel({
@@ -14,6 +13,8 @@ const seed = () => {
   });
 
   book.save();
+  console.log('Closing the DB connection for our seed file');
+  mongoose.disconnect();
 };
 
 seed();

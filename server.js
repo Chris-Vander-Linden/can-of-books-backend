@@ -21,28 +21,26 @@ db.once('open', function () {
 
 const BookModel = require('./models/books');
 
+app.get('/', (request, response) => {
+  response.send('Home');
+});
+
 app.get('/books', (request, response) => {
 
-  const book = new BookModel({
-    title: 'Bobby',
-    description: 'stuff',
-    status: 'thank you'
-  });
-  book.save();
-
-  BookModel.find((err, book) => {
+  BookModel.find({ title: 'A great new book' }, (err, book) => {
     if (err) return console.error(err);
-    console.log(book);
     response.send(book);
   });
+});
 
-  BookModel.find({ title: 'Bobby' }, (err, book) => {
-    if (err) return console.error(err);
-    console.log(book);
-  });
+app.get('*', (request, response) => {
+  response.status(404).send('Not available');
+});
 
-  //response.send('test request received');
-
+// ERROR
+// eslint-disable-next-line no-unused-vars
+app.use((error, request, res, next) => {
+  res.status(500).send(error.message);
 });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
