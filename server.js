@@ -19,7 +19,7 @@ db.once('open', function () {
   console.log('Mongoose is connected');
 });
 
-const BookModel = require('./models/books');
+const BookCollection = require('./models/books.js');
 
 app.get('/', (request, response) => {
   response.send('Home');
@@ -27,9 +27,11 @@ app.get('/', (request, response) => {
 
 app.get('/books', (request, response) => {
 
-  BookModel.find({ title: 'A great new book' }, (err, book) => {
+
+  BookCollection.find({ title: 'A great new book' }, (err, book) => {
     if (err) return console.error(err);
-    response.send(book);
+    console.log(book);
+    response.status(200).send(book);
   });
 });
 

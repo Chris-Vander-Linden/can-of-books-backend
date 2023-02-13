@@ -2,17 +2,21 @@
 
 require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOURL);
-const BookModel = require('./models/books.js');
 
-const seed = () => {
-  const book = new BookModel({
+const BookCollection = require('./models/books.js');
+
+async function seed(){
+
+  // I had to put this inside async function to make sure BookCollection would run after.
+  await mongoose.connect(process.env.MONGOURL);
+
+  await BookCollection.create({
     title: 'A great new book',
     description: 'It\'s a pretty bad book!',
     status: 'outdated book'
   });
 
-  book.save();
+  //book.save();
   console.log('Closing the DB connection for our seed file');
   mongoose.disconnect();
 };
