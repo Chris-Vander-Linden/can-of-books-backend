@@ -1,0 +1,16 @@
+GET http://localhost:3001/books
+
+###
+
+GET http://localhost:3001/books/fluffy
+
+###
+
+POST http://localhost:3001/books
+Content-Type: application/json
+
+  {
+    "title": "An awful old book part 3",
+    "description": "A cowboy and his horse take a ride...",
+    "status": "very outdated book"
+  }
