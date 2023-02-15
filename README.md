@@ -35,6 +35,18 @@ Finish time: 02-11-2023 2:00am
 
 Actual time needed to complete: 4 hours total
 
+---
+
+Name of feature: Lab 12: Add CRUD ability
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 02-13-2023 11:00am
+
+Finish time: -
+
+Actual time needed to complete: -
+
 ## Credit and Collaborations
 
 [Eva Grace Smith](https://github.com/EvaGraceSmith): Collaborator and code reviewer
