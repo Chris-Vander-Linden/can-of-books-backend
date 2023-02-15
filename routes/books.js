@@ -38,9 +38,28 @@ router.post('/', (req, res) => {
 });
 
 // Update one (update part)
-// router.patch('/', (req, res) => {});
+router.put('/:id', (req, res) => {
+  BookCollection.updateOne({
+    _id: req.params.id,
+    title: req.body.title,
+    description: req.body.description,
+    status: req.body.status
+  }, (err, book) => {
+    // server error
+    if (err) res.status(500).send(err);
+    // response okay
+    res.status(200).send(book);
+  });
+});
 
 // Delete one
-// router.delete('/:title', (req, res) => {});
+router.delete('/:id', (req, res) => {
+  BookCollection.deleteOne({ _id: req.params.id }, (err, book) => {
+    // server error
+    if (err) res.status(500).send(err);
+    // response okay
+    res.status(200).send(book);
+  });
+});
 
 module.exports = router;
