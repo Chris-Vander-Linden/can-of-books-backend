@@ -12,8 +12,8 @@ router.get('/', (req, res) => {
 });
 
 // Get one
-router.get('/:title', (req, res) => {
-  BookCollection.find({ title: req.params.title }, (err, book) => {
+router.get('/:id', (req, res) => {
+  BookCollection.find({ _id: req.params.id }, (err, book) => {
     // server error
     if (err) res.status(500).send(err);
     // response okay

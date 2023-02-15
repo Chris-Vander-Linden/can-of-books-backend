@@ -4,38 +4,33 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5005;
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.MONGOURL);
 
+// Bring in our endpoint routes
+const booksRouter = require('./routes/books.js');
+const homeRouteResponse = require('./routes/home.js');
+const noFoundResponse = require('./routes/home.js');
+
+// create server.
 const app = express();
 // We probably won't use cors.
 app.use(cors());
-// Allows our server to accept JSON in the body
+// Allows our server to accept JSON in the body.
 app.use(express.json());
 
+// db connection.
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Mongoose is connected');
 });
 
-
-
 /*** ROUTES ***/
-app.get('/', (request, response) => {
-  response.send('Home');
-});
-
-// Bring in our endpoint routes
-const booksRouter = require('./routes/books.js');
+app.get('/', homeRouteResponse);
 app.use('/books', booksRouter);
-
-app.get('*', (request, response) => {
-  response.status(404).send('Not available');
-});
-
-
-
+app.get('*', noFoundResponse);
 
 /*** ERROR ***/
 // eslint-disable-next-line no-unused-vars
