@@ -28,7 +28,7 @@ app.get('/', (request, response) => {
 app.get('/books', (request, response) => {
 
 
-  BookCollection.find({ title: 'A great new book' }, (err, book) => {
+  BookCollection.find({}, (err, book) => {
     if (err) return console.error(err);
     console.log(book);
     response.status(200).send(book);

@@ -1,24 +1,42 @@
 # Can of Books - Backend
 
-**Author**: Team Member Names Goes Here
+**Authors**: Chris Vander Linden and Eva Grace Smith
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+
+This is the backend for the can of books project.  It will connect to our frontend, which can be found here: [https://github.com/EvaGraceSmith/can-of-books-frontend](https://github.com/EvaGraceSmith/can-of-books-frontend)
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+
+    git clone git@github.com:Chris-Vander-Linden/can-of-books-backend.git
+    // make sure you cd into directory.
+    npm install
+    // start nodemon
+    npm run listen
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+
+This project uses express.js, mongoDB, mongoose.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+02-10-2023 3:45pm - Express server, mongoDB, and mongoose are now working.
 
 ## Estimates
-<!-- See below -->
+
+Name of feature: Lab 11: Set up Express, mongoDB, mongoose, create schemas, and insert 'seed' data to db.
+
+Estimate of time needed to complete: 3.5 hours
+
+Start time: 02-10-2023 3:45pm
+
+Finish time: 02-11-2023 2:00am
+
+Actual time needed to complete: 4 hours total
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped
+
+[Eva Grace Smith](https://github.com/EvaGraceSmith): Collaborator and code reviewer
+[Jack Stubblefield](https://github.com/Jacks-01): DeltaV TA
+[Craig Barkley](https://github.com/tektechnologies): DeltaV course instructor
