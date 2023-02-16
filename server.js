@@ -11,6 +11,7 @@ mongoose.connect(process.env.MONGOURL);
 // Bring in our endpoint routes
 const booksRouter = require('./routes/books.js');
 const homeRouteResponse = require('./routes/home.js');
+const searchBooks = require('./routes/searchBooks.js');
 const noFoundResponse = require('./routes/home.js');
 
 // create server.
@@ -29,6 +30,7 @@ db.once('open', function () {
 
 /*** ROUTES ***/
 app.get('/', homeRouteResponse);
+app.get('/searchBooks', searchBooks);
 app.use('/books', booksRouter);
 app.get('*', noFoundResponse);
 
