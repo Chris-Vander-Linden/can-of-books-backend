@@ -1,0 +1,35 @@
+GET http://localhost:3001/books
+
+###
+
+GET http://localhost:3001/books/63e81d79e4dfc3a366e4ee24
+
+###
+
+POST http://localhost:3001/books
+Content-Type: application/json
+
+  {
+    "title": "An awful old book part 3",
+    "description": "A cowboy and his horse take a ride...",
+    "status": "very outdated book"
+  }
+
+###
+
+PUT http://localhost:3001/books/63e81d6a9f75519c80992ecd
+Content-Type: application/json
+
+  {
+    "title": "Fluffy died",
+    "description": "It's okay!",
+    "status": "lost book"
+  }
+
+###
+
+DELETE http://localhost:3001/books/63e81d6a9f75519c80992ecd
+
+###
+
+GET http://localhost:3001/searchBooks?search=dog
