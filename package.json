@@ -1,5 +1,5 @@
 {
-  "name": "Can of Books Backend",
+  "name": "can-of-books-backend",
   "version": "1.1.0",
   "description": "This is the backend for the Can of Books team project",
   "main": "server.js",
