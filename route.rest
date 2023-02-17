@@ -32,4 +32,4 @@ DELETE http://localhost:3001/books/63e81d6a9f75519c80992ecd
 
 ###
 
-GET http://localhost:3001/searchBooks?search=clown
+GET http://localhost:3001/searchBooks?search=dog
