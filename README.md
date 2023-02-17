@@ -34,6 +34,7 @@ Start time: 02-10-2023 3:45pm
 Finish time: 02-11-2023 2:00am
 
 Actual time needed to complete: 4 hours total
+<<<<<<< HEAD
 
 ---
 
@@ -46,6 +47,8 @@ Start time: 02-13-2023 11:00am
 Finish time: -
 
 Actual time needed to complete: -
+=======
+>>>>>>> d58f05d9408646da3d82a5769e7dbf436c4e8a46
 
 ## Credit and Collaborations
 

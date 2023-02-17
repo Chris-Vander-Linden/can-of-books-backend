@@ -34,7 +34,29 @@ app.get('/searchBooks', searchBooks);
 app.use('/books', booksRouter);
 app.get('*', noFoundResponse);
 
+<<<<<<< HEAD
 /*** ERROR ***/
+=======
+app.get('/', (request, response) => {
+  response.send('Home');
+});
+
+app.get('/books', (request, response) => {
+
+
+  BookCollection.find({}, (err, book) => {
+    if (err) return console.error(err);
+    console.log(book);
+    response.status(200).send(book);
+  });
+});
+
+app.get('*', (request, response) => {
+  response.status(404).send('Not available');
+});
+
+// ERROR
+>>>>>>> d58f05d9408646da3d82a5769e7dbf436c4e8a46
 // eslint-disable-next-line no-unused-vars
 app.use((error, request, res, next) => {
   res.status(500).send(error.message);
