@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // https://mongoosejs.com/docs/guide.html
 const bookSchema = new mongoose.Schema({
   title: { type: String, require: true },
-  author: { type: String, require: true },
+  author: { type: Array, require: true },
   image: { type: String, require: false },
   description: { type: String, require: true },
   status: { type: Boolean, require: true }
