@@ -37,8 +37,15 @@ router.post('/', (req, res) => {
     });
 });
 
+
+
+
 // Update one (update part)
 router.put('/:id', (req, res) => {
+
+  // third param needs to be overwrite: true?
+  // _v and _id might be required from frontend...
+
   BookCollection.updateOne({
     _id: req.params.id,
     title: req.body.title,
