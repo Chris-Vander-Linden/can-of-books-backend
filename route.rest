@@ -11,8 +11,10 @@ Content-Type: application/json
 
   {
     "title": "An awful old book part 3",
+    "author": "Stephen King",
+    "image": "image/jpg",
     "description": "A cowboy and his horse take a ride...",
-    "status": "very outdated book"
+    "status": true
   }
 
 ###
