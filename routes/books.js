@@ -26,6 +26,8 @@ router.post('/', (req, res) => {
   BookCollection.create(
     {
       title: req.body.title,
+      author: req.body.author,
+      image: req.body.image,
       description: req.body.description,
       status: req.body.status
     }
