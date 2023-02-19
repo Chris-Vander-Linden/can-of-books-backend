@@ -34,21 +34,18 @@ Start time: 02-10-2023 3:45pm
 Finish time: 02-11-2023 2:00am
 
 Actual time needed to complete: 4 hours total
-<<<<<<< HEAD
 
 ---
 
-Name of feature: Lab 12: Add CRUD ability
+Name of feature: Lab 12: Add CR_D ability
 
 Estimate of time needed to complete: 4 hours
 
 Start time: 02-13-2023 11:00am
 
-Finish time: -
+Finish time: 02-18-2023
 
-Actual time needed to complete: -
-=======
->>>>>>> d58f05d9408646da3d82a5769e7dbf436c4e8a46
+Actual time needed to complete: 5 hours
 
 ## Credit and Collaborations
 
