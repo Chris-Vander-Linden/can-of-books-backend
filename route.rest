@@ -23,7 +23,7 @@ PUT https://can-of-books-backend-3urh.onrender.com/books/63f141b779fd740a711d487
 Content-Type: application/json
 
   {
-    "title": "This is a new title!",
+    "title": "This is a new title!"
   }
 
 ###
