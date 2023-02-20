@@ -40,8 +40,6 @@ router.post('/', (req, res) => {
 });
 
 
-
-
 // Update one (update part)
 router.put('/:id', (req, res) => {
 
@@ -51,6 +49,8 @@ router.put('/:id', (req, res) => {
   BookCollection.updateOne({
     _id: req.params.id,
     title: req.body.title,
+    author: req.body.author,
+    image: req.body.image,
     description: req.body.description,
     status: req.body.status
   }, (err, book) => {
