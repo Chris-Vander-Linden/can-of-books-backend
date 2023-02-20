@@ -43,19 +43,20 @@ router.post('/', (req, res) => {
 // Update one (update part)
 router.put('/:id', (req, res) => {
   console.log(req);
-  BookCollection.updateOne({
-    _id: req.params.id,
-    title: req.body.title,
-    author: req.body.author,
-    image: req.body.image,
-    description: req.body.description,
-    status: req.body.status
-  }, (err, book) => {
-    // server error
-    if (err) res.status(500).send(err);
-    // response okay
-    res.status(200).send(book);
-  });
+  BookCollection.updateOne(
+    { _id: req.params.id },
+    {
+      title: req.body.title,
+      author: req.body.author,
+      description: req.body.description,
+      status: req.body.status
+    }
+    , (err, book) => {
+      // server error
+      if (err) res.status(500).send(err);
+      // response okay
+      res.status(200).send(book);
+    });
 });
 
 // Delete one
