@@ -17,6 +17,7 @@ class SearchedBooks {
     this.description = book.volumeInfo.description;
     this.image = book.volumeInfo.imageLinks?.thumbnail;
     this.googleBookID = book.id;
+    this.status = false;
   }
 }
 
